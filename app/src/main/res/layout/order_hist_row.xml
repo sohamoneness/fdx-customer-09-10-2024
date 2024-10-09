@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingRight="12dp"
+    android:paddingLeft="12dp"
+    android:id="@+id/main_rl"
+    android:background="@drawable/white_bg_f5_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/rl_rest_info"
+        android:layout_marginRight="4dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/rest_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+            app:srcCompat="@drawable/cust_order_demo_img" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/rest_img"
+            android:layout_marginLeft="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:id="@+id/tv_rest_name"
+                android:text="Petuk Mahaa-raj"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_rest_address"
+                android:textSize="12sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Sector II, Bidhannagar"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_rest_info"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="#f7f7f7" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/order_item_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/view1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/order_item_rv"
+        android:id="@+id/view2"
+        android:background="@drawable/dotted_line_separater"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:layout_marginBottom="4dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingRight="8dp"
+        android:id="@+id/rl_tot_amount"
+        android:layout_below="@+id/view2">
+
+        <TextView
+            android:id="@+id/tv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="07 June 2022 at 8:15 PM"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_tot_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/demo_amount_txt"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_tot_amount"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="#f7f7f7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="You rated: " />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@drawable/oval_bg_dark"
+                android:drawableRight="@drawable/icon_star"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="3.5"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_del_status"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corner_orange_bg"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="Delivered"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

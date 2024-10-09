@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.OrderHistory.OrderSummeryActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_head_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Order Summery"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_complete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/rl_header">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:paddingBottom="64dp"
+            android:clipToPadding="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="50dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+                    <LinearLayout
+                        android:id="@+id/li_status_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_status"
+                        android:gravity="center"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp">
+                        <TextView
+                            android:id="@+id/orderStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NEW"
+                            android:textColor="#fff"
+                            android:textSize="10sp"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivRest"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"
+                        app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+                        app:srcCompat="@drawable/cust_order_demo_img" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@+id/ivRest"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                            android:id="@+id/tvRestName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                            android:id="@+id/tvRestAdr"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#767676"
+                            android:textSize="12sp" />
+
+                        <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                            android:id="@+id/tvDownloadSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Download Invoice"
+                            android:textColor="#65B869"
+                            android:layout_marginTop="5dp"
+                            android:drawableRight="@drawable/ic_download_icon"
+                            android:drawablePadding="5dp"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/offWhiteBg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                        android:id="@+id/itemCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Your Order"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPayType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/rounded_corner_orange_bg"
+                        android:gravity="center"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Delivered"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/refer_dash_bg"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/pastOrderItemRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/offWhiteBg" />
+                <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Billing Details"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Subtotal" />
+
+                    <TextView
+                        android:id="@+id/tvSubtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹0"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_delivery_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Delivery Fee" />
+
+                    <TextView
+                        android:id="@id/tvDelFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹0"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Packing charges" />
+
+                    <TextView
+                        android:id="@+id/tvPackingChrg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹0"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Govt. Taxes"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvTax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹0"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tip"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvTips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹0"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp">
+
+                    <TextView
+                        android:id="@+id/tvDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Discount"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvDiscountAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/offWhiteBg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp">
+
+                    <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                       android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash Payment"
+                        android:textColor="@color/black" />
+
+                    <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="Total Pay"
+                        android:textColor="@color/black" />
+
+                    <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                        android:id="@+id/tvTotPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹0"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/offWhiteBg" />
+
+                <TextView
+                    android:id="@+id/tvDelStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:text="This order was delivered" />
+
+                <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Order Details"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"
+                    android:background="@drawable/dotted_line_separater" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginRight="16dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_vertical"
+                       android:text="Order Id"
+                       android:textColor="#000000"
+                       android:textSize="14sp"/>
+
+                   <TextView
+                       android:id="@+id/tvOrderNumber"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text=""
+                       android:textColor="#767676"
+                       android:layout_marginTop="5dp"
+                       android:textSize="12sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="8dp"
+                       android:gravity="center_vertical"
+                       android:textSize="12sp"
+                       android:visibility="gone"
+                       android:text="Transaction ID" />
+
+                   <TextView
+                       android:id="@+id/tvTransId"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text=""
+                       android:textColor="@color/black"
+                       android:visibility="gone"
+                       android:textSize="14sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="8dp"
+                       android:textColor="#000000"
+                       android:textSize="14sp"
+                       android:gravity="center_vertical"
+                       android:text="Payment" />
+
+                   <TextView
+                       android:id="@+id/tvPayment"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text=""
+                       android:textColor="#767676"
+                       android:layout_marginTop="5dp"
+                       android:textSize="12sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="8dp"
+                       android:textSize="14sp"
+                       android:textColor="#000000"
+                       android:gravity="center_vertical"
+                       android:text="Date" />
+
+                   <TextView
+                       android:id="@+id/tvDate"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text=""
+                       android:textColor="#767676"
+                       android:textSize="12sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="8dp"
+                       android:gravity="center_vertical"
+                       android:text="Phone Number"
+                       android:visibility="gone"
+                       android:textSize="12sp"/>
+
+                   <TextView
+                       android:id="@+id/tvPhn"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="9876543210"
+                       android:textColor="@color/black"
+                       android:visibility="gone"
+                       android:textSize="14sp" />
+
+                   <TextView
+                       android:id="@+id/tvDelToTxt"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="8dp"
+                       android:textSize="14sp"
+                       android:textColor="#000000"
+                       android:gravity="center_vertical"
+                       android:text="Delivered to" />
+
+                   <TextView
+                       android:id="@+id/tvDelTo"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text=""
+                       android:textColor="#767676"
+                       android:textSize="12sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="8dp"
+                       android:gravity="center_vertical"
+                       android:textSize="12sp"
+                       android:visibility="gone"
+                       android:text="Delivered by" />
+
+                   <TextView
+                       android:id="@+id/tvDelBy"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Dilip Ghose"
+                       android:visibility="gone"
+                       android:textColor="@color/black"
+                       android:textSize="14sp" />
+
+
+                   <LinearLayout
+                       android:id="@+id/li_cancel"
+                       android:layout_width="match_parent"
+                       android:layout_height="56dp"
+                       android:layout_marginTop="8dp"
+                       android:background="@drawable/rounded_corner_status2"
+                       android:gravity="center"
+                       android:layout_above="@+id/btnLL"
+                       android:visibility="gone"
+                       android:orientation="vertical">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="#B02A37"
+                           android:textSize="16sp"
+                           android:text="This order has been cancelled"
+                           />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/tvReason"
+                           android:textColor="#B02A37"
+                           android:textSize="12sp"
+                           android:text="This order has been cancelled"/>
+                   </LinearLayout>
+
+
+
+
+               </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLL"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnOrderStat"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_green_btn_bg"
+                android:text="Order Status"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/btnOrderRepeat"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_corner_orange_bg"
+                android:text="Repeat Order"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

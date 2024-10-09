@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="2dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_centerVertical="true">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivFood"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView2"
+            app:srcCompat="@drawable/demo_food_item" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivFood">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/containerRL">
+
+                <LinearLayout
+                    android:id="@+id/sellStatLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivItemType"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_non_veg" />
+
+                    <TextView
+                        android:id="@+id/tvSellStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center_vertical"
+                        android:text="Bestseller"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+                <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                    android:id="@+id/tvItemName"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sellStatLL"
+                    android:ellipsize="end"
+                    android:layout_marginTop="4dp"
+                    android:text="Chicken Biriyani with egg (1pc Chicken + 1pc Egg)"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/extTxtLL"
+                    android:layout_below="@+id/tvItemName"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <com.fdxUser.app.CustomFonts.ManropeSingleLineBoldTV
+                        android:id="@+id/tvExtraTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="4dp"
+                        android:ellipsize="end"
+                        android:text="In Rice &amp; Aloo  ke vk v rtbnttgbvnfsfdfstintivughguhyvbvib"
+                        android:textSize="13sp" />
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:id="@+id/ivItemInfo"
+                        android:visibility="gone"
+                        android:src="@drawable/icon_info"
+                        android:layout_marginLeft="16dp"/>
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/extTxtLL"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical|left"
+                    android:text="123"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOldPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/extTxtLL"
+                    android:layout_toRightOf="@+id/tvPrice"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical|left"
+                    android:text="123"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/colorSeparater"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/strike_through_tv_bg"/>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addRL"
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_below="@+id/extTxtLL">
+
+                    <LinearLayout
+                        android:id="@+id/addItemLL"
+                        android:layout_width="60dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/white_rounded_bg_d9_border"
+                        android:gravity="center"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="ADD"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/black" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/qtyCountRL"
+                        android:layout_width="60dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/white_rounded_bg_d9_border"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivMinus"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_minus"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvQty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivPlus"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_plus"
+                            app:tint="@color/black" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/osLL"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Out of Stock"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="center"
+                            android:background="@drawable/white_rounded_corner_8_bg_with_e7_border"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E7E7E7" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="1dp"
+    android:layout_margin="4dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/iv_cat"
+        app:srcCompat="@drawable/background"
+        android:scaleType="fitCenter"
+        app:shapeAppearanceOverlay="@style/roundedCornersImageView"/>
+    <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_cat"
+        android:singleLine="true"
+        android:layout_gravity="center_horizontal"
+        android:text="Category"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="12sp"/>
+
+</LinearLayout>

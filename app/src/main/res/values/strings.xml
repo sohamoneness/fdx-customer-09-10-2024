@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Food Express Online</string>
+    <string name="rupee_symbol">\u20B9</string>
+    <string name="demo_amount_txt">Total: \u20B9 280</string>
+
+    <array name="array_dot_inactive">
+        <item>#FBF6F6</item>
+        <item>#FBF6F6</item>
+        <item>#FBF6F6</item>
+    </array>
+
+    <array name="array_dot_active">
+        <item>@color/white</item>
+        <item>@color/activeColor</item>
+        <item>@color/white</item>
+    </array>
+
+    <string-array name="gender">
+        <item>-- Select --</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--<string name="google_map_api_key">AIzaSyDKY2a6HODRNOZllFnE1AOscmV0HXLIMRo</string>-->
+    <!--<string name="google_map_api_key">AIzaSyDyQoXQLzc8IJhqDKOgCcvQKU-euh7xTX0</string>-->
+    <!--<string name="google_map_api_key">AIzaSyAvWCKWu7G-entaXv8kCc6ciYiPSqI46oo</string>-->
+    <!--<string name="google_map_api_key">AIzaSyBJBK0_i0tx6c-bw2rKhBzQ9cP8G9WGcBg</string>-->
+   <!-- <string name="google_map_api_key">AIzaSyDyQoXQLzc8IJhqDKOgCcvQKU-euh7xTX0</string>-->
+    <string name="google_map_api_key">AIzaSyDJSr0Wt34aSzwIyAv-86pbRXkiQqrCpEs</string>
+
+    <!--<string name="google_map_api_key">AIzaSyDaBcD7PHCW3pNiXGT5QJL7iqz9SBMqVg4</string>-->
+    <!--<string name="razorpay_key">rzp_test_foha7F3ofnRsQX</string>-->
+    <string name="razorpay_key">rzp_live_ZVAhNxc9nRy3hb</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="terms"><u>Terms of service</u></string>
+    <string name="policy"><u>Privacy policy</u></string>
+    <string name="forgot_password"><u>Forgot password?</u></string>
+    <string name="register_now"><u>Register Now</u></string>
+    <string name="login_txt"><u>Log In</u></string>
+    <string name="about_txt">Founded in Feb, 2018, Food Express is the first ever food delivery service provider in town. Presently over 30 restaurants and over Fifteen thousand satisfied customers strong.</string>
+    <string name="pricing_fees_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="cat_name">Cat Name</string>
+
+    <!--<string name="default_web_client_id" translatable="false">565849793755-3sgvb1gf1tehjla9kjqno1hne0me4jvg.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">565849793755</string>
+    <string name="google_app_id" translatable="false">1:565849793755:android:d43d6f241ece2b6b5598fe</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCRrO-bIZUpyQv0voTtSTjjIeoKvnXp8cU</string>
+    <string name="google_storage_bucket" translatable="false">food-express-fcb72.appspot.com</string>
+    <string name="project_id" translatable="false">food-express-fcb72</string>-->
+</resources>

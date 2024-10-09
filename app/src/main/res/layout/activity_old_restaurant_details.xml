@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RestaurantScreens.RestaurantDetails">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBglight"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvHeaderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivCart"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_cart" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_search_row"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_heart"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_rest_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="4dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rest_card_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_below="@+id/iv_rest_img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-42dp"
+                    android:background="@drawable/top_round_corner_white_bg"
+                    android:elevation="12dp"
+                    android:outlineSpotShadowColor="#01000000"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/white"
+                        app:tabBackground="@drawable/indicator_bg"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/colorAccent"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/colorAccent"
+                        app:tabTextAppearance="@style/MyCustomTextAppearance"
+                        app:tabTextColor="@color/black" />
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tab_layout" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/menu_ll"
+                    android:layout_below="@+id/rest_card_rl"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        app:tabIndicatorColor="@color/colorAccent"
+                        app:tabBackground="@drawable/indicator_bg"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        app:tabMode="scrollable"
+                        app:tabTextColor="@color/black"
+                        android:id="@+id/menu_tab_layout"
+                        app:tabTextAppearance="@style/MyCustomTextAppearance"
+                        app:tabSelectedTextColor="@color/colorAccent"/>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="8dp"
+                        android:scrollbars="none"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="50dp"
+                        android:visibility="visible"
+                        android:id="@+id/menu_rv"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No item available right now!"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:id="@+id/tvNoData"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rev_ll"
+                    android:layout_below="@+id/rest_card_rl"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"
+                        android:id="@+id/rev_rv"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/viewCartRL"
+        android:layout_margin="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone"
+        android:background="@drawable/rounded_corner_orange_bg"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tvCartQty"
+                android:gravity="center_vertical"
+                android:text="1 items"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_margin="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tvCartPrice"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tvViewCart"
+            android:gravity="center_vertical"
+            android:text="View Cart"
+            android:layout_marginRight="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"/>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

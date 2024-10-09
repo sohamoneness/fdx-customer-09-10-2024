@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ivImg"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fdx_final_banner_1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".35">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/img_2"
+                android:id="@+id/ivImg2"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".65">
+            <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTxt1"
+                android:layout_centerHorizontal="true"
+                android:text="Same quality"
+                android:textSize="20sp"
+                android:letterSpacing=".05"
+                android:textColor="@color/colorAccent"
+                />
+
+            <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTxt1"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/orng_side_rounded_bg"
+                android:text="Same price"
+                android:textSize="20sp"
+                android:letterSpacing=".05"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

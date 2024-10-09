@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:id="@+id/mainLL"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:id="@+id/iv_pop_rest"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedCornersImageView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                android:id="@+id/tv_pop_rest_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="restName"
+                android:textColor="@color/black"
+                android:layout_marginRight="22dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp">
+
+                <ImageView
+                    android:id="@+id/ivFav"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_fav_outline" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_pop_rest_address"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tv_pop_rest_name"
+            android:layout_marginTop="4dp"
+            android:text="restAddress"
+            android:lineHeight="14dp"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+
+                <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tvRating"
+                    android:text="4.5"
+                    android:paddingRight="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="12sp"/>
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_rating_star"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_dot" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_card_map"
+                    android:visibility="gone"/>
+                <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tvDist"
+                    android:text="3.1 kms"
+                    android:gravity="center"
+                    android:textColor="@color/txt_gray"
+                    android:visibility="gone"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_dot"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_card_clock"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"/>
+                <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tvTime"
+                    android:text="42 mins"
+                    android:gravity="center"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_dot"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"/>
+
+            <com.fdxUser.app.CustomFonts.ManropeSingleLineBoldTV
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvOrderStat"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/txt_gray"
+                android:text="₹0 delivery fee, first order"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="first order"
+            android:visibility="gone"
+            android:textSize="10sp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

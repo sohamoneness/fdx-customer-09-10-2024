@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:id="@+id/mainRL"
+    android:background="@drawable/rounded_coupon_bg"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp">
+
+    <LinearLayout
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_coupon_code_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
+            android:text="TEST"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="0 left"
+            android:textColor="#B02A37"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl1"
+        >
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEST"
+            android:textColor="#65B869"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"/>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/vw1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E7E7E7"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/description2"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/description2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:text="Use code TRYNEW &amp; get 50% off on orders above ₹ 150. Maximum discount - ₹ 100"
+        android:textColor="#A8A8A8"
+        android:textSize="10sp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100% OFF"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:rotation="270"
+        android:layout_marginLeft="-12dp"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>

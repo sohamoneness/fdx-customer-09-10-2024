@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginBottom="5dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:paddingRight="12dp"
+    android:paddingLeft="12dp"
+    android:gravity="center"
+    android:background="@drawable/special_dish_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSpecialDish"
+        android:textSize="10sp"
+        android:text="Biriyani"
+        android:maxLines="1"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

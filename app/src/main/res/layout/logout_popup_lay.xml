@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:padding="16dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corner_white_16_bg">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:text="Happy Independence Day!!"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/white_bg_with_border"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="12dp"
+            android:text="Lets Go!"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/rounded_corner_orange_bg"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

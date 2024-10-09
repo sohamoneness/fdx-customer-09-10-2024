@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivFood"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+        app:srcCompat="@drawable/demo_food_item"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ivFood"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/frstRL"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:id="@+id/ivType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/non_veg"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="200dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivType"
+                android:drawablePadding="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="Bestseller"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="\u20B9 300"
+                android:textColor="#767676"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frstRL"
+            android:paddingRight="4dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvExtraTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="In Rice &amp; Aloo"
+                android:textColor="#767676"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvExtraPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:text="\u20B9 49"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frstRL">
+            <!--android:layout_below="@+id/tvExtraTxt">-->
+
+
+            <RelativeLayout
+                android:id="@+id/qtyCountRL"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_corner_orange_bg"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivMinus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_minus"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvQty1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivPlus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_add"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvQty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvTotPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="\u20B9 349"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/dotView"
+        android:layout_alignParentBottom="true"
+        android:background="#e7e7e7" />
+
+</RelativeLayout>

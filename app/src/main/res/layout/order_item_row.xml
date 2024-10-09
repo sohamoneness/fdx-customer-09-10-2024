@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_margin="4dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_non_veg"
+            android:visibility="gone"
+            android:src="@drawable/non_veg"/>
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:id="@+id/iv_veg"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/veg"
+            android:visibility="gone"/>
+
+        <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+            android:id="@+id/tv_food_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:text="Chicken Biriyani With egg (1 Pc Chicken + 1 pc Egg)"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAddOn"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:text="Extra Chicken (1 Pice)"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAddOn"
+            android:ellipsize="end"
+            android:text="Extra Chicken (1 Pice)"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="\u20B9 298"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/viewSep"
+        android:background="@color/offWhiteBg"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        />
+
+
+</LinearLayout>

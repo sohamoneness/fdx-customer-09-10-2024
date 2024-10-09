@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="4dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <ImageView
+        android:id="@+id/ivType"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/non_veg" />
+
+    <com.fdxUser.app.CustomFonts.ManropeRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/tvAddOnItem"
+        android:layout_marginLeft="8dp"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/ivType"
+        android:gravity="center_vertical"
+        android:text="Extra chicken"
+        android:textColor="@color/black" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <com.fdxUser.app.CustomFonts.ManropeRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/tvAddOnPrice"
+        android:textColor="@color/colorAccent"
+        android:text="₹ 49"
+        android:textSize="14sp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/checkbox"/>
+
+</RelativeLayout>

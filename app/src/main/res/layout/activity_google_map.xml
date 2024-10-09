@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:id="@+id/btnImgBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tv_head_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Select a location"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:weightSum="1"
+            android:background="@drawable/semi_oval_grey_border_white_bg"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/icon_search_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search Address"
+                    android:textColor="#FF002F47"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/tv_pickup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:hint="Search locality.."
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:textColorHint="#FFA4A4A4"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imgError"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/rel_use_current_loc"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_plus"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_current_location" />
+
+            <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:text="Use current location"
+                android:layout_toEndOf="@+id/img_plus"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/img_arrow_right"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_arrow_right_grey" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:visibility="gone"
+            android:background="#ECECEC" />
+
+        <ListView
+            android:id="@+id/adrs_List"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="8dp"
+            android:divider="@color/white"
+            android:dividerHeight="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/tvToolbarTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="22sp"
+                    android:gravity="center_vertical"
+                    android:text="Add New Address"
+                    android:textColor="#FF002F47"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="#E9EBF4"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F9F9F9"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F7F8FB">
+
+                        <RelativeLayout
+                            android:id="@+id/pickup_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@drawable/corner_map"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/search"
+                                android:layout_width="20sp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/search" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toRightOf="@+id/search"
+                                android:backgroundTint="#03ffffff"
+                                android:drawablePadding="14dp"
+                                android:hint="Search"
+                                android:imeOptions="actionSearch"
+                                android:paddingLeft="10dp"
+                                android:singleLine="true" />
+
+                            <ProgressBar
+                                android:id="@+id/statusCall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="7dp"
+                                android:layout_weight="2"
+                                android:indeterminateTint="@color/colorAccent"
+                                android:indeterminateTintMode="src_in"
+                                android:paddingRight="20dp"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="10dp"
+                                android:src="@drawable/error" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="16dp">
+
+                            <fragment
+                                android:id="@+id/map_location"
+                                android:name="com.google.android.gms.maps.MapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="120dp"
+                                android:src="@drawable/ic_map_pin" />
+
+                        </RelativeLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/map_location"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="27dp"
+                            android:backgroundTint="#00FFFFFF"
+                            android:hint="Full Address"
+                            android:singleLine="false"
+                            android:textColor="#FFA4A4A4"
+                            android:textColorHint="#FFA4A4A4"
+                            android:textSize="16dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="#ECECEC" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btn_add_address"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_back"
+                android:text="ADD ADDRESS"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

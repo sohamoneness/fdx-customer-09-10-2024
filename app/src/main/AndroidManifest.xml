@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fdxUser.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FDX"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.OtherScreens.AllCouponsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RestaurantScreens.SearchItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PolicyScreens.About"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OtherScreens.ForgotPassword.ForgetPassword"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.OtherScreens.ForgotPassword.CheckPhoneNumber"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.PolicyScreens.RefundPolicy"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.PolicyScreens.Support"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.PolicyScreens.PrivacyPolicy"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.PolicyScreens.TermsAndConditions"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.RestaurantScreens.RestaurantAddressActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.RestaurantScreens.NewRestaurantDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OtherScreens.FavouriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Profile.ChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OtherScreens.CouponActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OtherScreens.Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OtherScreens.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OtherScreens.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RestaurantScreens.CuisinesWiseRestaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OtherScreens.OrderStatusActivity"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key" />
+
+        <!-- lIve Razor Pay -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="@string/razorpay_key" />
+
+        <!--
+<meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        -->
+        <activity
+            android:name=".Activity.OtherScreens.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EntryPoint.EmailLogin"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Address.AddAddress"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrderHistory.OrderSummeryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.WalletModule.WalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RestaurantScreens.CheckOutActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RestaurantScreens.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RestaurantScreens.RestaurantDetails"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".Activity.RestaurantScreens.ShowAllScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Address.AddressList"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Address.GoogleMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrderHistory.OrderHistory"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Profile.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Profile.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EntryPoint.OTP"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EntryPoint.Register"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EntryPoint.Login"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EntryPoint.Tutorials"
+            android:exported="false" />
+        <!--
+<activity
+            android:name="com.fdxUser.app.Activity.RestaurantScreens.Dashboard"
+            android:exported="false" />
+        -->
+        <activity
+            android:name=".Activity.RestaurantScreens.DashboardHome"
+            android:exported="false">
+
+           <!-- <intent-filter>
+
+
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+
+                    android:host="13.127.50.16"
+
+                    android:scheme="https" />
+
+            </intent-filter>-->
+
+
+
+        </activity>
+
+        <activity
+            android:name=".Activity.EntryPoint.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <!-- below line is to set the action to our intent to view -->
+                <action android:name="android.intent.action.VIEW" />
+
+                <!-- on below line we are adding a default category to our intent -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- on below line we are adding a category to make our app browsable -->
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- on below line we are specifying the host name and
+                    the scheme type from which we will be calling our app -->
+                <data
+                    android:host="www.foodexpressonline.com"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <!-- below is the same filter as above just the scheme is changed to http -->
+            <!-- so we can open our app with the url starting with https and http as well -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="www.foodexpressonline.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Utills.PushNotification.FirebaseMessageReceiver"
+            android:directBootAware="true"
+            android:exported="true"
+            android:usesCleartextTraffic="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/fdxlogo" />
+            <!--
+                 Set color used with incoming notification messages. This is used when no color is set for the incoming
+                 notification message. See README(https://goo.gl/6BKBk7) for more.
+            -->
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorAccent" />
+        </service>
+
+    </application>
+
+</manifest>

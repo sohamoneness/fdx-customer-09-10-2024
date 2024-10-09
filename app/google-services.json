@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "499643242513",
+    "firebase_url": "https://fdx-user.firebaseio.com",
+    "project_id": "fdx-user",
+    "storage_bucket": "fdx-user.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499643242513:android:5e8ffc8dcf05c68f",
+        "android_client_info": {
+          "package_name": "com.fdxUser.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499643242513-8pojr1cks9drm5hbjf4mckb5gsqlkbqv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fdxUser.app",
+            "certificate_hash": "1355507b31c42c81690435d21008b2b94c358eed"
+          }
+        },
+        {
+          "client_id": "499643242513-p6hqtamice5pjg1jggmvn7mvuhln3rqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fdxUser.app",
+            "certificate_hash": "b11003d1cb0ec68013b1642b71df8bb57446e827"
+          }
+        },
+        {
+          "client_id": "499643242513-q1q9tu1jf8u4rl1nanlsb0k2uhjouk1p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fdxUser.app",
+            "certificate_hash": "0ae595c24f5423e8d5fc0eb1141116e568bb336d"
+          }
+        },
+        {
+          "client_id": "499643242513-n1p56iko6ldm4tkdrpg6ao064rc4cf5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJBK0_i0tx6c-bw2rKhBzQ9cP8G9WGcBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499643242513-n1p56iko6ldm4tkdrpg6ao064rc4cf5g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

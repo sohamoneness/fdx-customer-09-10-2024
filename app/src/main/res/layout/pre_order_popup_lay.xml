@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:padding="16dp"
+    android:background="@drawable/rounded_corner_white_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivClock"
+        android:src="@drawable/ic_clock_popup"
+        android:layout_centerHorizontal="true"/>
+
+    <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHead"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/ivClock"
+        android:text="Thanks for visiting us!"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:textColor="#767676"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        android:textSize="14sp"
+        android:layout_below="@+id/tvHead"/>
+
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="I agree!"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/rounded_corner_orange_bg"
+            android:layout_below="@+id/tvMsg"/>
+
+
+</RelativeLayout>

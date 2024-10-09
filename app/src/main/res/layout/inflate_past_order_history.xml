@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:id="@+id/main_rl"
+    android:orientation="vertical"
+    android:background="@drawable/white_bg_f5_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_rest_info"
+        android:visibility="gone"
+        android:layout_marginRight="4dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/rest_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+            app:srcCompat="@drawable/cust_order_demo_img"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/rest_img"
+            android:visibility="gone"
+            android:layout_marginLeft="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:id="@+id/tv_rest_name"
+                android:text="Petuk Mahaa-raj"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_rest_address"
+                android:textSize="12sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Sector II, Bidhannagar"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp"
+        >
+
+        <TextView
+            android:id="@+id/orderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: FDEX23456780"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <LinearLayout
+            android:id="@+id/li_status_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_status"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp">
+            <TextView
+                android:id="@+id/orderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEW"
+                android:textColor="#fff"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="6dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Amount : "
+                android:textColor="#767676"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/orderAmount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="450"
+                android:textColor="#767676"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_rest_info"
+        android:visibility="gone"
+        android:background="#E7E7E7" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/order_item_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/view1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/order_item_rv"
+        android:id="@+id/view2"
+        android:background="@drawable/dotted_line_separater"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:layout_marginBottom="4dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:id="@+id/rl_tot_amount"
+        android:background="@drawable/drawable_white_bg"
+        android:layout_below="@+id/view2">
+
+        <TextView
+            android:id="@+id/tv_tot_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="Total Items : 3"
+            android:textColor="#767676"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_tot_amount"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"
+        android:background="#E7E7E7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="View Details"
+            android:textColor="#263238"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/li_repeat_order_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corner_repeat_order"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/repeatOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat"
+                android:textColor="#fff"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

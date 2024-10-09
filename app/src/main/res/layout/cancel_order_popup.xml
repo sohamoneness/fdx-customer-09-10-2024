@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:orientation="vertical"
+    android:elevation="2dp"
+    android:background="@drawable/rounded_corner_white_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvStoreName"
+        android:text="Do you want to cancel this order?"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter why?"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/etReason"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:background="@drawable/small_view_white_with_border_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner_orange_bg"
+            android:layout_marginRight="4dp"
+            android:text="Submit"
+            android:elevation="1dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/btnYes"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/btnNo"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:elevation="1dp"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:background="@drawable/off_white_bg_with_round_corner_border"
+            android:layout_marginLeft="4dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.OtherScreens.FeedbackActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_head_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Give Feedback"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivCart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/ivSearch"
+            android:src="@drawable/ic_cart"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_search_row"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/refer_dash_bg">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvRestName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Arsalan"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvRestAddress"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#52616B"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivRest"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    app:shapeAppearanceOverlay="@style/roundedCornersImageView3"
+                    app:srcCompat="@drawable/demo_food_item" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/offWhiteBg" />
+
+            <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                android:id="@+id/itemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="How was your food?"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                android:id="@+id/tvRestName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Rate Biriyani Plaza Multicuisine"
+                android:textColor="#52616B"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="#E7E7E7" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:rating="0"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:theme="@style/RatingBarColor" />
+
+            <EditText
+                android:id="@+id/etFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/rlRating"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Add a review to let other customer’s know how you liked this restaurant"
+                android:padding="8dp"
+                android:textColorHint="#767676"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/offWhiteBg" />
+            <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                android:id="@+id/itemCount2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="How was the delivery agent?"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.fdxUser.app.CustomFonts.ManropeBoldTextView
+                android:id="@+id/tvRestName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Rate Rajat Ray Chakraborty"
+                android:textColor="#52616B"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="#E7E7E7" />
+
+            <RatingBar
+                android:id="@+id/rating2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:rating="0"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:theme="@style/RatingBarColor" />
+
+            <EditText
+                android:id="@+id/etFeedback2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/rlRating"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Add a review to let other customer’s know how you liked this agent"
+                android:padding="8dp"
+                android:textColorHint="#767676"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_header"
+        android:visibility="gone"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_user" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ivUser"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Ayan Banerjee"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTxt"
+            android:text="Your feedback will improve our delivery experience"
+            android:layout_below="@+id/tvUserName"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:maxLines="2"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/rlRating"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tvTxt">
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Done"
+
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_corner_orange_bg"/>
+
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:layout_below="@+id/rl_header">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivRestImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_rest_img" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Petuk Maharaj"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How was the food taste?"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/rlRatingFood"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tvTxt">
+
+            <RatingBar
+                android:id="@+id/ratingFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:numStars="5"
+                android:rating="4.5"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:theme="@style/RatingBarColor" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:hint="Your feedback for the food"
+            android:background="@drawable/white_bg_f5_border"
+            android:gravity="start"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/etFoodFeedback"
+            android:layout_below="@+id/rlRating" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/offWhiteBg"/>
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivDelBoy"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/fast_del_img" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_toRightOf="@+id/ivDelBoy">
+
+            <com.fdxUser.app.CustomFonts.ManropeExtraBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDelBoyName"
+                android:text="Petuk Maharaj"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How was the delivery agent?"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/rlRatingDelBoy"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tvTxt">
+
+            <RatingBar
+                android:id="@+id/ratingDelBoy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:numStars="5"
+                android:rating="4.5"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:theme="@style/RatingBarColor" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:hint="Your feedback for the delivery agent"
+            android:background="@drawable/white_bg_f5_border"
+            android:gravity="start"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:id="@+id/etDelBoyFeedback"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/rlRating"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Submit Review"
+        android:id="@+id/btnDone"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_green_btn_bg"/>
+</RelativeLayout>
